@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~normalize.css';
+//settings
+@import './styles/imports/settings.imports';
+//tools
+@import './styles/imports/tools.imports';
+//generics
+@import './styles/imports/generic.imports';
+//elements
+@import './styles/imports/elements.imports';
+//blocks
+@import './styles/imports/blocks.imports';
+//utilities
+@import './styles/imports/utilities.imports';
