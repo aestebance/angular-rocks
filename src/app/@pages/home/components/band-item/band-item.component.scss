@@ -17,7 +17,7 @@
     display: flex;
     justify-items: center;
     align-items: center;
-    width: 96%;
+    width: 100%;
     height: 56px;
     background-color: rgba(0, 0, 0, 0.5);
     transition: visibility 0s linear;
@@ -35,10 +35,10 @@
     letter-spacing: normal;
     text-align: center;
   }
-}
 
-.c-band:hover {
-  .c-band__hover {
-    visibility: visible;
+  &:hover {
+    .c-band__hover {
+      visibility: visible;
+    }
   }
 }
