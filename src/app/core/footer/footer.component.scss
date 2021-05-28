@@ -1,0 +1,26 @@
+.c-footer {
+  background-image: none;
+  color: #FFFFFF;
+  background-color: #333333;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.6;
+
+  &__sheet {
+    min-height: 120px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+  }
+
+  &__text {
+    width: 417px;
+    margin: 49px auto;
+    font-size: 0.875rem;
+    position: relative;
+    padding: 0;
+  }
+}
