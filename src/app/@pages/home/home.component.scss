@@ -1,0 +1,19 @@
+.c-body {
+  background-image: none;
+  color: #111111;
+  background-color: #FFFFFF;
+  min-height: 80px;
+  margin: auto;
+
+  &__sheet {
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  &__item-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 50px;
+  }
+}

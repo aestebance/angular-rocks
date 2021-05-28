@@ -1,8 +1,11 @@
-<div style="text-align: center">
-  <h2>band List from json file...</h2>
-  <ul *ngFor="let band of bandList">
-    <li>
-      <h3>Band Name: {{band.name}}</h3>
-    </li>
-  </ul>
-</div>
+<section class="c-body">
+  <div class="c-body__sheet">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="c-body__item-container col-12 col-sm-12 col-md-6 col-lg-6" *ngFor="let band of bandList">
+          <app-band-item [band]="band"></app-band-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
