@@ -1,0 +1,67 @@
+.c-header {
+  background-image: none;
+  color: #111111;
+  background-color: #FFFFFF;
+  min-height: 80px;
+  width: 80%;
+  margin: auto;
+
+  &__sheet {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  @media (max-width: 358px) {
+    &__sheet {
+      width: 95%;
+    }
+  }
+
+  &__nav {
+    margin: 22px 0 22px auto;
+  }
+
+  &__menu {
+    opacity: 1;
+    display: table;
+    white-space: nowrap;
+    position: relative;
+    line-height: 1;
+  }
+
+  &__container {
+    display: flex;
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  &__ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+
+    &__item {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+    &__link {
+      padding: 10px 20px;
+      display: block;
+      &--active {
+        color: #478ac9!important;
+      }
+    }
+  }
+}
