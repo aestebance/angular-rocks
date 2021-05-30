@@ -81,7 +81,11 @@
     }
   }
 
-  @media (max-width: 480px) {
+  &__search-bar {
+    margin-bottom: 2px;
+  }
+
+  @media (max-width: 587px) {
     &__sheet {
       margin: auto;
       width: 100%;
