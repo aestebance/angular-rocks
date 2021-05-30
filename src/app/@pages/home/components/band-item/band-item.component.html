@@ -1,10 +1,13 @@
-<a routerLink="/details/{{band.id}}">
-  <div class="c-band">
-    <img src="{{band.image}}" alt="{{band.name}}" class="c-band__img"/>
-
-    <div class="c-band__hover">
-      <figcaption class="c-band__text">{{band.name}}</figcaption>
-    </div>
-  </div>
-</a>
-
+<p-card header="{{band.name}}" [style]="{width: '360px'}" styleClass="p-card-shadow">
+  <ng-template pTemplate="header">
+    <a routerLink="/details/{{band.id}}">
+      <img alt="{{band.name}}" src="{{band.image}}">
+    </a>
+  </ng-template>
+  <p>{{text}}</p>
+  <ng-template pTemplate="footer">
+    <a routerLink="/details/{{band.id}}">
+    <p-button label="More" icon="pi pi-plus"></p-button>
+    </a>
+  </ng-template>
+</p-card>

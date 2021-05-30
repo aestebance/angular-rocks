@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {PrimeNGConfig} from "primeng/api";
 
 @Component({
   selector: 'app-band-item',
@@ -7,10 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BandItemComponent implements OnInit {
   @Input() band : any;
+  text: string = "";
 
-  constructor() { }
+  constructor(private primengConfig: PrimeNGConfig) { }
 
   ngOnInit(): void {
+    this.primengConfig.ripple = true;
+    this.text = this.band.description.substring(0, 150) + '...';
+
   }
 
 }
