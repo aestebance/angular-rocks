@@ -1,0 +1,13 @@
+.c-edit {
+  background-image: none;
+  color: #111111;
+  background-color: #FFFFFF;
+  min-height: 80px;
+  margin: auto;
+
+  &__sheet {
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+  }
+}
