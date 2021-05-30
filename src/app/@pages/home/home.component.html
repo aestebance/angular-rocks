@@ -1,8 +1,9 @@
+<app-header [showSearchBar]="showSearchBar" (searchBarEmitter)="searchBarChanges($event)"></app-header>
 <section class="c-body">
   <div class="c-body__sheet">
     <div class="container-fluid">
       <div class="row">
-        <div class="c-body__item-container col-12 col-sm-12 col-md-6 col-lg-6" *ngFor="let band of bandList">
+        <div class="c-body__item-container col-12 col-sm-12 col-md-6 col-lg-6" *ngFor="let band of bandFiltered">
           <app-band-item [band]="band"></app-band-item>
         </div>
       </div>

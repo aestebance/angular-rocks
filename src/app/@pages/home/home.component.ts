@@ -9,14 +9,20 @@ import {BandsService} from "../../shared/services/bands.service";
 export class HomeComponent implements OnInit {
 
   bandList : any;
-  constructor(private bandsService : BandsService) { }
-
-  ngOnInit(): void {
+  bandFiltered: any;
+  showSearchBar: boolean = true;
+  constructor(private bandsService : BandsService) {
     this.bandsService.getBandListObservable().subscribe(bandList => {
       this.bandList = bandList;
+      this.bandFiltered = this.bandList;
     });
-    // this.bandsService.deleteBandList(1);
-    // this.bandsService.addBandList("");
-    // this.bandsService.setBandList(1, "");
+  }
+
+  ngOnInit(): void {
+    window.scroll(0, 0);
+  }
+
+  searchBarChanges(changes: any): void {
+    this.bandFiltered = this.bandList.filter((data: any) => data.name.toUpperCase().includes(changes.toUpperCase()));
   }
 }
