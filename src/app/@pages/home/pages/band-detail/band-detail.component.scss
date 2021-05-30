@@ -8,5 +8,16 @@
     position: relative;
     margin: 0 auto;
     width: 60%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  &__text {
+    width: 100%;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 14px;
   }
 }
