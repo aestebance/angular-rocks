@@ -4,14 +4,13 @@
   <div class="c-detail__sheet">
     <div class="c-detail__buttons">
       <div>
-        <a routerLink="/">
           <button pButton
                   type="button"
                   label="Back"
-                  icon="pi pi-arrow-left">
+                  icon="pi pi-arrow-left"
+                  (click)="back()">
 
           </button>
-        </a>
       </div>
       <div>
         <button pButton
@@ -24,50 +23,54 @@
         </button>
       </div>
     </div>
-    <p class="c-detail__title">
-      {{band.name}}
-      <button pButton type="button"
-              label="Edit"
-              icon="pi pi-user-edit"
-              class="p-button-warning p-button-sm c-detail__button"
-              (click)="editBand()">
+    <div class="c-detail__frame">
+      <p class="c-detail__title">
+        {{band.name}}
+        <button pButton type="button"
+                label="Edit"
+                icon="pi pi-user-edit"
+                class="p-button-warning p-button-sm c-detail__button"
+                (click)="editBand()">
 
-      </button>
-      <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000"></p-confirmDialog>
-      <button pButton type="button"
-              label="Delete"
-              icon="pi pi-exclamation-triangle"
-              class="p-button-danger p-button-sm c-detail__button"
-              (click)="confirmDelete()">
+        </button>
+        <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000"></p-confirmDialog>
+        <button pButton type="button"
+                label="Delete"
+                icon="pi pi-exclamation-triangle"
+                class="p-button-danger p-button-sm c-detail__button"
+                (click)="confirmDelete()">
 
-      </button>
-    </p>
+        </button>
+      </p>
 
-    <img class="c-detail__img" alt="{{band.name}}" src="/assets/images/{{band.image}}">
-    <p-fieldset legend="Description" [toggleable]="true" [collapsed]="false">
-      <p class="c-detail__text">{{band.description}}</p>
-    </p-fieldset>
-    <p-fieldset legend="Discography" [toggleable]="true" [collapsed]="true">
-      <p-orderList [value]="band.discography"
-                   [listStyle]="{'max-height': '20rem'}"
-                   header="List of Discs" filterBy="name"
-                   filterPlaceholder="Filter by name"
-                   [dragdrop]="false"
-                   controlsPosition="right">
-        <ng-template let-disc pTemplate="item">
-          <div class="product-item">
-            <div class="product-list-detail">
-              <h5 class="p-mb-2">{{disc.name}}</h5>
+      <img class="c-detail__img" alt="{{band.name}}" src="/assets/images/{{band.image}}">
+      <p-fieldset legend="Description" [toggleable]="true" [collapsed]="false">
+        <p class="c-detail__text">{{band.description}}</p>
+      </p-fieldset>
+      <br/>
+      <p-fieldset legend="Discography" [toggleable]="true" [collapsed]="true">
+        <p-orderList [value]="band.discography"
+                     [listStyle]="{'max-height': '20rem'}"
+                     header="List of Discs" filterBy="name"
+                     filterPlaceholder="Filter by name"
+                     [dragdrop]="false"
+                     controlsPosition="right">
+          <ng-template let-disc pTemplate="item">
+            <div class="product-item">
+              <div class="product-list-detail">
+                <h5 class="p-mb-2">{{disc.name}}</h5>
+              </div>
+              <div class="product-list-action">
+                <h6 class="p-mb-2">{{disc.year}}</h6>
+              </div>
             </div>
-            <div class="product-list-action">
-              <h6 class="p-mb-2">{{disc.year}}</h6>
-            </div>
-          </div>
-        </ng-template>
-      </p-orderList>
-    </p-fieldset>
-    <p-fieldset legend="Video" [toggleable]="true" [collapsed]="true">
-      <app-youtube-player class="c-detail__video" [ytClip]="band.video"></app-youtube-player>
-    </p-fieldset>
+          </ng-template>
+        </p-orderList>
+      </p-fieldset>
+      <br/>
+      <p-fieldset legend="Video" [toggleable]="true" [collapsed]="true">
+        <app-youtube-player class="c-detail__video" [ytClip]="band.video"></app-youtube-player>
+      </p-fieldset>
+    </div>
   </div>
 </section>

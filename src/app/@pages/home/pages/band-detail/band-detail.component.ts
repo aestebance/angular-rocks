@@ -64,4 +64,8 @@ export class BandDetailComponent implements OnInit {
     let newId = this.bandList.length;
     this.router.navigate(['/edit/' + newId]);
   }
+
+  back() : void {
+    this.router.navigate(['..']);
+  }
 }
