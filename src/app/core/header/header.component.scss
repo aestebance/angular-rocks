@@ -63,6 +63,12 @@
     }
   }
 
+  &__shadow {
+    -webkit-box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.36);
+    -moz-box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.36);
+    box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.36);
+  }
+
   &__item {
     display: inline-block;
     position: relative;

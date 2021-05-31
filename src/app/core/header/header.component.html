@@ -11,7 +11,7 @@
                routerLink="/"
                routerLinkActive="c-header__ul__link--active"
                [routerLinkActiveOptions]="{exact: true}">
-              <button class="p-button-sm"
+              <button class="p-button-sm c-header__shadow"
                       [ngClass]="{'p-button-outlined' : isDirectoryPath('')}"
                       pButton
                       type="button"
@@ -21,7 +21,7 @@
             <a class="c-header__ul__link"
                routerLink="/about"
                routerLinkActive="c-header__ul__link--active">
-              <button class="p-button-sm"
+              <button class="p-button-sm c-header__shadow"
                       [ngClass]="{'p-button-outlined' : isDirectoryPath('about')}"
                       pButton
                       type="button"
@@ -31,7 +31,7 @@
             <a class="c-header__ul__link"
                routerLink="/contact"
                routerLinkActive="c-header__ul__link--active">
-              <button class="p-button-sm"
+              <button class="p-button-sm c-header__shadow"
                       [ngClass]="{'p-button-outlined' : isDirectoryPath('contact')}"
                       pButton
                       type="button"
