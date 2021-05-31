@@ -22,5 +22,4 @@ export class HeaderComponent implements OnInit {
   isDirectoryPath(path: string) {
     return this.router.isActive('/' + path , true);
   }
-
 }
