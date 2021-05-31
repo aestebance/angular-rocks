@@ -7,13 +7,35 @@
       <div class="c-header__container">
         <ul class="c-header__ul">
           <li class="c-header__ul__item">
-            <a class="c-header__ul__link" routerLink="/" routerLinkActive="c-header__ul__link--active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+            <a class="c-header__ul__link"
+               routerLink="/"
+               routerLinkActive="c-header__ul__link--active"
+               [routerLinkActiveOptions]="{exact: true}">
+              <button class="p-button-sm"
+                      [ngClass]="{'p-button-outlined' : isDirectoryPath('')}"
+                      pButton
+                      type="button"
+                      label="Home"></button></a>
           </li>
           <li class="c-header__ul__item">
-            <a class="c-header__ul__link" routerLink="/about" routerLinkActive="c-header__ul__link--active">About</a>
+            <a class="c-header__ul__link"
+               routerLink="/about"
+               routerLinkActive="c-header__ul__link--active">
+              <button class="p-button-sm"
+                      [ngClass]="{'p-button-outlined' : isDirectoryPath('about')}"
+                      pButton
+                      type="button"
+                      label="About"></button></a>
           </li>
           <li class="c-header__ul__item">
-            <a class="c-header__ul__link" routerLink="/contact" routerLinkActive="c-header__ul__link--active">Contact</a>
+            <a class="c-header__ul__link"
+               routerLink="/contact"
+               routerLinkActive="c-header__ul__link--active">
+              <button class="p-button-sm"
+                      [ngClass]="{'p-button-outlined' : isDirectoryPath('contact')}"
+                      pButton
+                      type="button"
+                      label="Contact"></button></a>
           </li>
         </ul>
       </div>

@@ -5,6 +5,7 @@ import { CoreRoutingModule } from './core-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchBarComponent } from './header/components/search-bar/search-bar.component';
+import {ButtonModule} from "primeng/button";
 
 
 @NgModule({
@@ -17,9 +18,10 @@ import { SearchBarComponent } from './header/components/search-bar/search-bar.co
         HeaderComponent,
         FooterComponent
     ],
-    imports: [
-        CommonModule,
-        CoreRoutingModule
-    ]
+  imports: [
+    CommonModule,
+    CoreRoutingModule,
+    ButtonModule
+  ]
 })
 export class CoreModule { }
