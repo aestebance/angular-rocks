@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {BandsService} from "../../../../shared/services/bands.service";
 import {ActivatedRoute} from "@angular/router";
+import {PrimeNGConfig} from "primeng/api";
 
 @Component({
   selector: 'app-band-detail',
@@ -12,7 +13,7 @@ export class BandDetailComponent implements OnInit {
   bandId: any;
   band: any;
 
-  constructor(private route: ActivatedRoute, private bandsService: BandsService) {
+  constructor(private primengConfig: PrimeNGConfig, private route: ActivatedRoute, private bandsService: BandsService) {
     this.route.paramMap.subscribe(params => {
       if (params.get('bandId')) {
         this.bandId = params.get('bandId');
@@ -28,6 +29,7 @@ export class BandDetailComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.primengConfig.ripple = true;
     window.scroll(0, 0);
   }
 

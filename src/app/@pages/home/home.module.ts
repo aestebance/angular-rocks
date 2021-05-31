@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { HomeRoutingModule } from './home-routing.module';
 import {HomeComponent} from "./home.component";
 import { BandItemComponent } from './components/band-item/band-item.component';
@@ -12,6 +11,8 @@ import { YoutubePlayerComponent } from './pages/band-detail/components/youtube-p
 import {YouTubePlayerModule} from '@angular/youtube-player';
 import {CardModule} from "primeng/card";
 import {ButtonModule} from "primeng/button";
+import {FieldsetModule} from "primeng/fieldset";
+import {OrderListModule} from "primeng/orderlist";
 
 @NgModule({
   declarations: [HomeComponent, BandItemComponent, BandDetailComponent, BandEditComponent, BandsGalleryComponent, YoutubePlayerComponent],
@@ -21,7 +22,9 @@ import {ButtonModule} from "primeng/button";
     CoreModule,
     YouTubePlayerModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    FieldsetModule,
+    OrderListModule
   ]
 })
 export class HomeModule { }
