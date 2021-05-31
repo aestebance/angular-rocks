@@ -13,6 +13,11 @@ import {CardModule} from "primeng/card";
 import {ButtonModule} from "primeng/button";
 import {FieldsetModule} from "primeng/fieldset";
 import {OrderListModule} from "primeng/orderlist";
+import {FormsModule} from "@angular/forms";
+import {InputTextModule} from "primeng/inputtext";
+import {InputTextareaModule} from "primeng/inputtextarea";
+import {ConfirmDialogModule} from "primeng/confirmdialog";
+import {MessagesModule} from "primeng/messages";
 
 @NgModule({
   declarations: [HomeComponent, BandItemComponent, BandDetailComponent, BandEditComponent, BandsGalleryComponent, YoutubePlayerComponent],
@@ -24,7 +29,12 @@ import {OrderListModule} from "primeng/orderlist";
     CardModule,
     ButtonModule,
     FieldsetModule,
-    OrderListModule
+    OrderListModule,
+    FormsModule,
+    InputTextModule,
+    InputTextareaModule,
+    ConfirmDialogModule,
+    MessagesModule
   ]
 })
 export class HomeModule { }
