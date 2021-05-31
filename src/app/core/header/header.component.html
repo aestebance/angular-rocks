@@ -1,5 +1,8 @@
 <header class="c-header">
   <div class="c-header__sheet">
+    <div class="c-header__search-bar">
+      <app-search-bar *ngIf="showSearchBar" (searchBarEmitter)="searchBarChanges($event)"></app-search-bar>
+    </div>
     <nav class="c-header__nav c-header__menu">
       <div class="c-header__container">
         <ul class="c-header__ul">
@@ -13,9 +16,6 @@
             <a class="c-header__ul__link" routerLink="/contact" routerLinkActive="c-header__ul__link--active">Contact</a>
           </li>
         </ul>
-      </div>
-      <div class="c-header__search-bar">
-        <app-search-bar *ngIf="showSearchBar" (searchBarEmitter)="searchBarChanges($event)"></app-search-bar>
       </div>
     </nav>
   </div>
