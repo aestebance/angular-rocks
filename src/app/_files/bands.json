@@ -2,7 +2,7 @@
   {
     "name": "The Rolling Stones",
     "description": "The Rolling Stones are an English rock band formed in London in 1962. Diverging from the pop rock of the early-1960s, the Rolling Stones pioneered the gritty, heavier-driven sound that came to define hard rock. Their first stable line-up was vocalist Mick Jagger, multi-instrumentalist Brian Jones, guitarist Keith Richards, drummer Charlie Watts, and bassist Bill Wyman. During their formative years Brian Jones was the primary leader: he put the band together, named it, and drove the sound and look of the band. After Andrew Loog Oldham became the group's manager in 1963, he encouraged them to write their own songs. Jagger and Richards became the primary creative force behind the band, alienating Jones, who developed a drug addiction that interfered with his ability to meaningfully contribute. He left the band shortly before his death in 1969, having been replaced by guitarist Mick Taylor, who in turn left in 1974 to be replaced by Ronnie Wood. Since Wyman's departure in 1993,  the band has continued on as a four-piece.",
-    "image": "rollingstones.jpg",
+    "image": "/assets/images/rollingstones.jpg",
     "discography": [
       {
         "name": "The Rolling Stones / England´s Newest Hit Makers",
@@ -111,7 +111,7 @@
   {
     "name": "Led Zeppelin",
     "description": "Led Zeppelin were an English rock band formed in London in 1968. The group consisted of vocalist Robert Plant, guitarist Jimmy Page, bassist/keyboardist John Paul Jones, and drummer John Bonham. With a heavy, guitar-driven sound, they are cited as one of the progenitors of hard rock and heavy metal, although their style drew from a variety of influences, including blues and folk music. Led Zeppelin have been credited as significantly impacting the nature of the music industry, particularly in the development of album-oriented rock (AOR) and stadium rock. Many critics consider Led Zeppelin one of the most successful, innovative and influential rock groups in history.",
-    "image": "ledzeppelin.jpg",
+    "image": "/assets/images/ledzeppelin.jpg",
     "discography": [
       {
         "name": "Led Zeppelin",
@@ -156,7 +156,7 @@
   {
     "name": "Queen",
     "description": "Queen are a British rock band formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals, piano), Brian May (guitar, vocals), Roger Taylor (drums, vocals) and John Deacon (bass). Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock. Before forming Queen, May and Taylor had played together in the band Smile. Mercury was a fan of Smile and encouraged them to experiment with more elaborate stage and recording techniques. He joined in 1970 and suggested the name 'Queen'. Deacon was recruited in February 1971, before the band released their eponymous debut album in 1973. Queen first charted in the UK with their second album, Queen II, in 1974. Sheer Heart Attack later that year and A Night at the Opera in 1975 brought them international success. The latter featured 'Bohemian Rhapsody', which stayed at number one in the UK for nine weeks and helped popularise the music video format.",
-    "image": "queen.jpg",
+    "image": "/assets/images/queen.jpg",
     "discography": [
       {
         "name": "Queen",
@@ -225,7 +225,7 @@
   {
     "name": "Pink Floyd",
     "description": "Pink Floyd were an English rock band formed in London in 1965. Gaining an early following as one of the first British psychedelic groups, they were distinguished for their extended compositions, sonic experimentation, philosophical lyrics and elaborate live shows, and became a leading band of the progressive rock genre, cited by some as the greatest progressive rock band of all time. Pink Floyd were founded by Syd Barrett (guitar, lead vocals), Nick Mason (drums), Roger Waters (bass guitar, vocals), Richard Wright (keyboards, vocals) and Bob Klose (guitars). Under Barrett's leadership, they released two charting singles and the successful debut album, The Piper at the Gates of Dawn (1967). Guitarist and vocalist David Gilmour joined in December 1967; Barrett left in April 1968 due to deteriorating mental health. Waters became the primary lyricist and thematic leader, devising the concepts behind the band's peak of critical and commercial success with the albums The Dark Side of the Moon (1973), Wish You Were Here (1975), Animals (1977) and The Wall (1979). The musical film based on The Wall, Pink Floyd – The Wall (1982), won two BAFTA Awards.",
-    "image": "pinkfloyd.jpeg",
+    "image": "/assets/images/pinkfloyd.jpeg",
     "discography": [
       {
         "name": "The Piper at the Gates of Dawn",
@@ -294,7 +294,7 @@
   {
     "name": "Deep Purple",
     "description": "Deep Purple are an English rock band formed in Hertford, Hertfordshire, in 1968.[1] They are considered to be among the pioneers of heavy metal and modern hard rock,[2][3] although their musical approach has changed over the years.[4] Originally formed as a psychedelic rock and progressive rock band, they shifted to a heavier sound with their 1970 album Deep Purple in Rock.[5] Deep Purple, together with Led Zeppelin and Black Sabbath, have been referred to as the 'unholy trinity of British hard rock and heavy metal in the early- to mid-seventies'.[6] They were listed in the 1975 Guinness Book of World Records as 'the globe's loudest band' for a 1972 concert at London's Rainbow Theatre[7][8] and have sold over 100 million albums worldwide.",
-    "image": "deeppurple.jpg",
+    "image": "/assets/images/deeppurple.jpg",
     "discography": [
       {
         "name": "Shades of Deep Purple",
@@ -387,7 +387,7 @@
   {
     "name": "AC/DC",
     "description": "AC/DC are an Australian rock band formed in Sydney in 1973 by Scottish-born brothers Malcolm and Angus Young.[1] Their music has been variously described as hard rock, blues rock, and heavy metal,[2] but the band themselves call it simply 'rock and roll'.[3] AC/DC underwent several line-up changes before releasing their first album, 1975's High Voltage. Membership subsequently stabilised around the Young brothers, singer Bon Scott, drummer Phil Rudd, and bassist Mark Evans. Evans was fired from the band in 1977 and replaced by Cliff Williams, who has appeared on every AC/DC album since 1978's Powerage. In February 1980, Scott died of acute alcohol poisoning after a night of heavy drinking.[4] The group considered disbanding but elected to stay together, bringing in longtime Geordie vocalist Brian Johnson as Scott's replacement.[5] Later that year, the band released their first album with Johnson, Back in Black, which was dedicated to Scott's memory. The album launched AC/DC to new heights of success and became one of the best selling albums of all time.",
-    "image": "acdc.jpg",
+    "image": "/assets/images/acdc.jpg",
     "discography": [
       {
         "name": "High Voltage",
@@ -468,7 +468,7 @@
   {
     "name": "The Ramones",
     "description": "The Ramones were an American punk rock band that formed in the New York City neighborhood of Forest Hills, Queens, in 1974. They are often cited as the first true punk rock group.[1][2] Despite achieving only limited commercial success initially, the band was highly influential in the United States, Argentina, Brazil and most of South America, as well as Europe, including the United Kingdom, the Netherlands, Germany, Sweden and Belgium. All of the band members adopted pseudonyms ending with the surname 'Ramone', although none of them were biologically related; they were inspired by Paul McCartney of the Beatles, who would check into hotels as 'Paul Ramon'. The Ramones performed 2,263 concerts, touring virtually nonstop for 22 years.[2] In 1996, after a tour with the Lollapalooza music festival, they played a farewell concert in Los Angeles and disbanded.[3] By 2014, all four of the band's original members had died – lead singer Joey Ramone (1951–2001), bassist Dee Dee Ramone (1951–2002), guitarist Johnny Ramone (1948–2004) and drummer Tommy Ramone (1949–2014).[4][5][6][7] The remaining surviving members of the Ramones—bassist C. J. Ramone (who replaced Dee Dee in 1989 and stayed with the band until its dissolution) and drummers Marky Ramone, Richie Ramone and Elvis Ramone—are still musically active. Recognition of the band's importance built over the years, and they are now mentioned in many assessments of all-time great rock music, such as number 26 in Rolling Stone magazine's list of the '100 Greatest Artists of All Time'[8] and number 17 in VH1's '100 Greatest Artists of Hard Rock'.[9] In 2002, the Ramones were ranked the second-greatest band of all time by Spin, trailing only the Beatles.[10] On March 18, 2002, the original four members and Tommy's replacement on drums, Marky Ramone, were inducted into the Rock and Roll Hall of Fame in their first year of eligibility, though Joey had died by then.[2][11] In 2011, the group was awarded a Grammy Lifetime Achievement Award.",
-    "image": "ramones.jpg",
+    "image": "/assets/images/ramones.jpg",
     "discography": [
       {
         "name": "Ramones",
@@ -525,7 +525,7 @@
   {
     "name": "Kiss",
     "description": "Kiss (often stylized as KIϟϟ) is an American rock band formed in New York City in January 1973 by Paul Stanley, Gene Simmons, Ace Frehley, and Peter Criss. Well known for its members' face paint and stage outfits, the group rose to prominence in the mid–late 1970s with its shocking live performances, which featured fire breathing, blood-spitting, smoking guitars, shooting rockets, levitating drum kits, and pyrotechnics. The band has gone through several lineup changes, with Stanley and Simmons being the only members to feature in every lineup. The original and best-known lineup consists of Stanley (vocals and rhythm guitar), Simmons (vocals and bass), Frehley (lead guitar and vocals), and Criss (drums and vocals). With their make-up and costumes, the band members took on the personae of comic book-style characters: the Starchild (Stanley), the Demon (Simmons), the Spaceman or Space Ace (Frehley), and the Catman (Criss). Due to creative differences, both Criss and Frehley had departed the group by 1982. ",
-    "image": "kiss.jpg",
+    "image": "/assets/images/kiss.jpg",
     "discography": [
       {
         "name": "Kiss",

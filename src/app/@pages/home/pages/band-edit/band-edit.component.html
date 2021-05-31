@@ -17,17 +17,61 @@
              pInputText
              [(ngModel)]="bandTemp.name"/>
       <h5>Description:</h5>
-      <textarea class="c-edit__description c-edit__input"
+      <textarea class="c-edit__description c-edit__input c-edit-mb-25"
                 pInputTextarea
                 [autoResize]="true"
                 [(ngModel)]="bandTemp.description">
     </textarea>
-      <h5>Image:</h5>
+      <p-orderList [value]="bandTemp.discography"
+                   [listStyle]="{'max-height': '20rem'}"
+                   header="List of Discs" filterBy="name"
+                   filterPlaceholder="Filter by name"
+                   [dragdrop]="false"
+                   controlsPosition="right">
+        <ng-template let-disc pTemplate="item">
+          <div class="product-item">
+            <div class="product-list-detail">
+              <h5 class="p-mb-2">{{disc.name}}</h5>
+              <span class="product-category">{{disc.year}}</span>
+            </div>
+            <div class="product-list-action">
+              <button pButton
+                      pRipple
+                      type="button"
+                      icon="pi pi-times"
+                      class="p-button-rounded p-button-danger"
+                      (click)="deleteDisc(disc.name)"></button>
+            </div>
+          </div>
+        </ng-template>
+      </p-orderList>
+      <div class="c-edit__new_disc">
+        <h5>Name:</h5>
+        <input type="text"
+               class="c-edit__input c-edit__new_disc-ml-10"
+               pInputText
+               [(ngModel)]="newDisc.name"/>
+        <h5 class="c-edit__new_disc-ml-10">Year:</h5>
+        <input type="number"
+               class="c-edit__input c-edit__new_disc-ml-10"
+               pInputText
+               [(ngModel)]="newDisc.year"/>
+        <button pButton
+                type="button"
+                label="Add"
+                icon="pi pi-plus-circle"
+                class="p-button-success c-edit__new_disc-ml-10 c-edit-mt-20"
+                (click)="addDisc()">
+
+        </button>
+      </div>
+
+      <h5>Image (relation 1:1.8):</h5>
       <div class="c-edit__image-box">
         <input class="c-edit__image-text c-edit__input" type="text"
                pInputText
                [(ngModel)]="bandTemp.image"/>
-        <img class="c-edit__image-img" src="/assets/images/{{bandTemp.image}}" alt="">
+        <img class="c-edit__image-img" src="{{bandTemp.image}}" alt="">
       </div>
       <h5>YouTube video code:</h5>
       <input type="text"

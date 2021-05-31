@@ -14,6 +14,10 @@ export class BandEditComponent implements OnInit {
   bandTemp: any = {};
   band: any;
   new: boolean = false;
+  newDisc : any = {
+    "name" : "",
+    "year" : 0
+  }
 
   constructor(private route: ActivatedRoute, private location : Location, private bandsService: BandsService) {
     this.route.paramMap.subscribe(params => {
@@ -57,5 +61,17 @@ export class BandEditComponent implements OnInit {
 
   discard() : void {
     this.location.back();
+  }
+
+  deleteDisc(name: any) : void {
+    const result = this.bandTemp.discography.filter(function(element: any){return name !== element.name;});
+    this.bandTemp.discography = result;
+  }
+
+  addDisc() : void {
+    this.bandTemp.discography.push({"name" : this.newDisc.name, "year" : this.newDisc.year});
+    this.bandTemp.discography = this.bandTemp.discography;
+    this.newDisc.name = "";
+    this.newDisc.year = 0;
   }
 }
