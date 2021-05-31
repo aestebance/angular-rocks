@@ -8,6 +8,8 @@ import {PrimeNGConfig} from "primeng/api";
 })
 export class BandItemComponent implements OnInit {
   @Input() band : any;
+  @Input() index: any;
+
   text: string = "";
 
   constructor(private primengConfig: PrimeNGConfig) { }
@@ -15,7 +17,6 @@ export class BandItemComponent implements OnInit {
   ngOnInit(): void {
     this.primengConfig.ripple = true;
     this.text = this.band.description.substring(0, 150) + '...';
-
   }
 
 }

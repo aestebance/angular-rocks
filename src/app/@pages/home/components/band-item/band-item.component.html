@@ -1,12 +1,12 @@
 <p-card header="{{band.name}}" [style]="{width: '360px'}" styleClass="p-card-shadow">
   <ng-template pTemplate="header">
-    <a routerLink="/details/{{band.id}}">
+    <a routerLink="/details/{{this.index}}">
       <img alt="{{band.name}}" src="/assets/images/{{band.image}}">
     </a>
   </ng-template>
   <p>{{text}}</p>
   <ng-template pTemplate="footer">
-    <a routerLink="/details/{{band.id}}">
+    <a routerLink="/details/{{this.index}}">
     <p-button label="More" icon="pi pi-plus"></p-button>
     </a>
   </ng-template>
