@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {BandsService} from "../../../../shared/services/bands.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-band-edit',
@@ -14,7 +15,7 @@ export class BandEditComponent implements OnInit {
   band: any;
   new: boolean = false;
 
-  constructor(private route: ActivatedRoute, private bandsService: BandsService) {
+  constructor(private route: ActivatedRoute, private location : Location, private bandsService: BandsService) {
     this.route.paramMap.subscribe(params => {
       if (params.get('bandId')) {
         this.bandId = params.get('bandId');
@@ -48,5 +49,13 @@ export class BandEditComponent implements OnInit {
 
   saveBand() : void {
 
+  }
+
+  back() : void {
+    this.location.back();
+  }
+
+  discard() : void {
+    this.location.back();
   }
 }
