@@ -9,6 +9,14 @@ export class BandsService {
   bandListSubject = new ReplaySubject(1);
 
   constructor() {
+    if (localStorage.getItem('bands') === null) {
+      localStorage.setItem('bands', JSON.stringify(this.bandList));
+    } else {
+      let retrievedObject = localStorage.getItem('bands');
+      if (retrievedObject != null) {
+        this.bandList = JSON.parse(retrievedObject);
+      }
+    }
     this.bandListSubject.next(this.bandList);
   }
 
@@ -16,26 +24,24 @@ export class BandsService {
     return this.bandListSubject;
   }
 
-  deleteBandList(bandId: number) {
+  deleteBand(bandId: number) {
     let newBandList: any;
     this.getBandListObservable().subscribe(bandList => {
       newBandList = bandList;
     });
-
     newBandList.splice(bandId, 1);
     this.bandListSubject.next(newBandList);
-    this.getBandListObservable().unsubscribe();
+    localStorage.setItem('bands', JSON.stringify(newBandList));
   }
 
-  addBandList(newBandValue: any) {
+  addBand(newBandValue: any) {
     let newBandList: any;
     this.getBandListObservable().subscribe(bandList => {
       newBandList = bandList;
     });
-
     newBandList.push(newBandValue);
     this.bandListSubject.next(newBandList);
-    this.getBandListObservable().unsubscribe();
+    localStorage.setItem('bands', JSON.stringify(newBandList));
   }
 
   setBandList(bandId: number, newBandValue: any) {
@@ -43,9 +49,8 @@ export class BandsService {
     this.getBandListObservable().subscribe(bandList => {
       newBandList = bandList;
     });
-
     newBandList[bandId] = newBandValue;
     this.bandListSubject.next(newBandList);
-    this.getBandListObservable().unsubscribe();
+    localStorage.setItem('bands', JSON.stringify(newBandList));
   }
 }
