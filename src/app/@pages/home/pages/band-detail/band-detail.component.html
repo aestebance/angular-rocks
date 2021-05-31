@@ -1,22 +1,46 @@
 <app-header [showSearchBar]="false"></app-header>
+<p-messages [value]="msgs"></p-messages>
 <section class="c-detail">
   <div class="c-detail__sheet">
     <div class="c-detail__buttons">
       <div>
         <a routerLink="/">
-          <button pButton type="button" label="Back" icon="pi pi-arrow-left"></button>
+          <button pButton
+                  type="button"
+                  label="Back"
+                  icon="pi pi-arrow-left">
+
+          </button>
         </a>
       </div>
       <div>
-        <button pButton type="button" label="New" icon="pi pi-plus-circle" class="p-button-success"></button>
+        <button pButton
+                type="button"
+                label="New"
+                icon="pi pi-plus-circle"
+                class="p-button-success"
+                (click)="newBand()">
+
+        </button>
       </div>
     </div>
     <p class="c-detail__title">
       {{band.name}}
-      <button pButton type="button" label="Edit" icon="pi pi-user-edit"
-              class="p-button-warning p-button-sm c-detail__button"></button>
-      <button pButton type="button" label="Delete" icon="pi pi-exclamation-triangle"
-              class="p-button-danger p-button-sm c-detail__button"></button>
+      <button pButton type="button"
+              label="Edit"
+              icon="pi pi-user-edit"
+              class="p-button-warning p-button-sm c-detail__button"
+              (click)="editBand()">
+
+      </button>
+      <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000"></p-confirmDialog>
+      <button pButton type="button"
+              label="Delete"
+              icon="pi pi-exclamation-triangle"
+              class="p-button-danger p-button-sm c-detail__button"
+              (click)="confirmDelete()">
+
+      </button>
     </p>
 
     <img class="c-detail__img" alt="{{band.name}}" src="/assets/images/{{band.image}}">
