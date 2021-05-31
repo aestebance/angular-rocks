@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {BandsService} from "../../../../shared/services/bands.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-band-edit',
@@ -6,10 +8,45 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./band-edit.component.scss']
 })
 export class BandEditComponent implements OnInit {
+  bandList: any;
+  bandId: any;
+  bandTemp: any = {};
+  band: any;
+  new: boolean = false;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private bandsService: BandsService) {
+    this.route.paramMap.subscribe(params => {
+      if (params.get('bandId')) {
+        this.bandId = params.get('bandId');
+      }
 
-  ngOnInit(): void {
+      this.bandsService.getBandListObservable().subscribe(bandList => {
+        this.bandList = bandList;
+      });
+
+      if (this.bandList.length <= this.bandId) {
+        this.new = true;
+        this.band = {
+          "name" : "",
+          "description" : "",
+          "image" : "empty.jpg",
+          "discography" : [
+
+          ],
+          "video" : "",
+          "webpage" : ""
+        };
+      } else {
+        this.band = this.bandList[this.bandId];
+      }
+    });
   }
 
+  ngOnInit(): void {
+    this.bandTemp = JSON.parse(JSON.stringify(this.band));
+  }
+
+  saveBand() : void {
+
+  }
 }
