@@ -16,11 +16,26 @@
     display: flex;
   }
 
+
   &__text {
-    width: 417px;
-    margin: 49px auto;
-    font-size: 0.875rem;
-    position: relative;
-    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
+    &-title {
+      font-size: 0.9rem;
+      font-weight: bolder;
+      padding: 0;
+      margin-bottom: 5px;
+    }
+
+    &-rights {
+      font-size: 0.8rem;
+      font-weight: normal;
+      font-style: italic;
+    }
   }
 }
