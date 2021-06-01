@@ -73,4 +73,8 @@ export class BandDetailComponent implements OnInit {
   back() : void {
     this.router.navigate(['..']);
   }
+
+  reorderDiscs() : void {
+    this.bandsService.setBandList(this.bandId, this.band);
+  }
 }

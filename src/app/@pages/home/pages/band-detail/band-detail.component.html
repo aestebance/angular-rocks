@@ -54,7 +54,8 @@
                      header="List of Discs" filterBy="name"
                      filterPlaceholder="Filter by name"
                      [dragdrop]="false"
-                     controlsPosition="right">
+                     controlsPosition="right"
+                     (onReorder)="reorderDiscs()">
           <ng-template let-disc pTemplate="item">
             <div class="product-item">
               <div class="product-list-detail">
