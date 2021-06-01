@@ -13,6 +13,9 @@ const routes: Routes = [
   },
   {
     path: 'edit/:bandId', component: BandEditComponent
+  },
+  {
+    path: 'new/:bandId', component: BandEditComponent
   }
 ];
 
