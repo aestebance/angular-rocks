@@ -2,11 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import {BandsService} from "../../../../shared/services/bands.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Location} from '@angular/common';
+import {PrimeNGConfig} from "primeng/api";
+import {ConfirmationService} from 'primeng/api';
+import {Message} from 'primeng/api';
 
 @Component({
   selector: 'app-band-edit',
   templateUrl: './band-edit.component.html',
-  styleUrls: ['./band-edit.component.scss']
+  styleUrls: ['./band-edit.component.scss'],
+  providers: [ConfirmationService]
 })
 export class BandEditComponent implements OnInit {
   bandList: any;
@@ -14,12 +18,19 @@ export class BandEditComponent implements OnInit {
   bandTemp: any = {};
   band: any;
   new: boolean = false;
+  msgs: Message[] = [];
   newDisc : any = {
     "name" : "",
     "year" : 0
   }
 
-  constructor(private route: ActivatedRoute, private location : Location, private bandsService: BandsService) {
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private location : Location,
+              private bandsService: BandsService,
+              private confirmationService: ConfirmationService,
+              private primengConfig: PrimeNGConfig,)
+  {
     this.route.paramMap.subscribe(params => {
       if (params.get('bandId')) {
         this.bandId = params.get('bandId');
@@ -29,12 +40,12 @@ export class BandEditComponent implements OnInit {
         this.bandList = bandList;
       });
 
-      if (this.bandList.length <= this.bandId) {
+      if (this.bandId === 'band') {
         this.new = true;
         this.band = {
           "name" : "",
           "description" : "",
-          "image" : "empty.jpg",
+          "image" : "/assets/images/empty.jpg",
           "discography" : [
 
           ],
@@ -48,11 +59,33 @@ export class BandEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.primengConfig.ripple = true;
     this.bandTemp = JSON.parse(JSON.stringify(this.band));
   }
 
-  saveBand() : void {
+  confirmDelete() {
+    this.confirmationService.confirm({
+      message: 'Are you sure that you want to delete this record?',
+      header: 'Delete Confirmation',
+      icon: 'pi pi-info-circle',
+      accept: () => {
+        this.msgs = [{severity: 'info', summary: 'Confirmed', detail: 'Record deleted'}];
+        this.deleteBand();
+      },
+      reject: () => {
+        this.msgs = [{severity: 'info', summary: 'Rejected', detail: 'You have rejected'}]
+      }
+    });
+  }
 
+  saveBand() : void {
+    if (!this.new) {
+      this.bandsService.setBandList(this.bandId, this.bandTemp);
+      this.router.navigate(['/details/' + this.bandId]);
+    } else {
+      this.bandsService.addBand(this.bandTemp);
+      this.router.navigate(['/']);
+    }
   }
 
   back() : void {
@@ -70,8 +103,12 @@ export class BandEditComponent implements OnInit {
 
   addDisc() : void {
     this.bandTemp.discography.push({"name" : this.newDisc.name, "year" : this.newDisc.year});
-    this.bandTemp.discography = this.bandTemp.discography;
     this.newDisc.name = "";
     this.newDisc.year = 0;
+  }
+
+  deleteBand(): void {
+    this.bandsService.deleteBand(this.bandId);
+    this.router.navigate(['/']);
   }
 }

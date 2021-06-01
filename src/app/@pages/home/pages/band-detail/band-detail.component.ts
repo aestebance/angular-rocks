@@ -17,7 +17,12 @@ export class BandDetailComponent implements OnInit {
   band: any;
   msgs: Message[] = [];
 
-  constructor(private confirmationService: ConfirmationService, private primengConfig: PrimeNGConfig, private route: ActivatedRoute, private router: Router, private bandsService: BandsService) {
+  constructor(private confirmationService: ConfirmationService,
+              private primengConfig: PrimeNGConfig,
+              private route: ActivatedRoute,
+              private router: Router,
+              private bandsService: BandsService)
+  {
     this.route.paramMap.subscribe(params => {
       if (params.get('bandId')) {
         this.bandId = params.get('bandId');
@@ -62,7 +67,7 @@ export class BandDetailComponent implements OnInit {
 
   newBand() : void {
     let newId = this.bandList.length;
-    this.router.navigate(['/edit/' + newId]);
+    this.router.navigate(['/new/band/']);
   }
 
   back() : void {
