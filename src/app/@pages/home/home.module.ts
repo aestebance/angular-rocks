@@ -18,24 +18,26 @@ import {InputTextModule} from "primeng/inputtext";
 import {InputTextareaModule} from "primeng/inputtextarea";
 import {ConfirmDialogModule} from "primeng/confirmdialog";
 import {MessagesModule} from "primeng/messages";
+import {RippleModule} from "primeng/ripple";
 
 @NgModule({
   declarations: [HomeComponent, BandItemComponent, BandDetailComponent, BandEditComponent, BandsGalleryComponent, YoutubePlayerComponent],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    CoreModule,
-    YouTubePlayerModule,
-    CardModule,
-    ButtonModule,
-    FieldsetModule,
-    OrderListModule,
-    FormsModule,
-    InputTextModule,
-    InputTextareaModule,
-    ConfirmDialogModule,
-    MessagesModule
-  ]
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        CoreModule,
+        YouTubePlayerModule,
+        CardModule,
+        ButtonModule,
+        FieldsetModule,
+        OrderListModule,
+        FormsModule,
+        InputTextModule,
+        InputTextareaModule,
+        ConfirmDialogModule,
+        MessagesModule,
+        RippleModule
+    ]
 })
 export class HomeModule { }
 
