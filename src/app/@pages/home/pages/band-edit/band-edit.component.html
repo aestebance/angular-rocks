@@ -45,7 +45,7 @@
              class="c-edit__input"
              pInputText
              [(ngModel)]="bandTemp.name"/>
-      <h5>Image (relation 1:1.8):</h5>
+      <h5>Image (relation 1:1.8 - recommended resolution: 700px width x 394px height):</h5>
       <div class="c-edit__image-box">
         <input class="c-edit__image-text c-edit__input" type="text"
                pInputText
@@ -75,7 +75,7 @@
                       pRipple
                       type="button"
                       icon="pi pi-times"
-                      class="p-button-rounded p-button-danger"
+                      class="p-button-rounded p-button-danger c-edit__buttons-delete"
                       (click)="deleteDisc(disc.name)"></button>
             </div>
           </div>

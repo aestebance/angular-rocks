@@ -1,10 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BandsService} from "../../../../shared/services/bands.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Location} from '@angular/common';
-import {PrimeNGConfig} from "primeng/api";
-import {ConfirmationService} from 'primeng/api';
-import {Message} from 'primeng/api';
+import {ConfirmationService, Message, PrimeNGConfig} from "primeng/api";
 
 @Component({
   selector: 'app-band-edit',
@@ -81,11 +79,10 @@ export class BandEditComponent implements OnInit {
   saveBand() : void {
     if (!this.new) {
       this.bandsService.setBandList(this.bandId, this.bandTemp);
-      this.router.navigate(['/details/' + this.bandId]);
     } else {
       this.bandsService.addBand(this.bandTemp);
-      this.router.navigate(['/']);
     }
+    this.msgs = [{severity: 'info', summary: 'Confirmed', detail: 'Band saved'}];
   }
 
   back() : void {
@@ -97,14 +94,17 @@ export class BandEditComponent implements OnInit {
   }
 
   deleteDisc(name: any) : void {
-    const result = this.bandTemp.discography.filter(function(element: any){return name !== element.name;});
-    this.bandTemp.discography = result;
+    this.bandTemp.discography = this.bandTemp.discography.filter(function (element: any) {
+      return name !== element.name;
+    });
   }
 
   addDisc() : void {
     this.bandTemp.discography.push({"name" : this.newDisc.name, "year" : this.newDisc.year});
     this.newDisc.name = "";
     this.newDisc.year = 0;
+    let li : any = document.querySelector('button.p-button-icon-only');
+    li.click();
   }
 
   deleteBand(): void {

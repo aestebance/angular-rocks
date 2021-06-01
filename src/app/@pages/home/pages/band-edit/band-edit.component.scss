@@ -73,6 +73,10 @@
     &-button {
       margin-left: 10px;
     }
+
+    &-delete {
+    z-index: 10000;
+    }
   }
 
   &-mb-25 {
@@ -134,5 +138,11 @@
       margin: 0 0 1rem 0;
       width: 100px;
     }
+  }
+}
+
+@media screen and (max-width: 709px) {
+  .c-edit__buttons-button {
+    margin-bottom: 10px;
   }
 }
