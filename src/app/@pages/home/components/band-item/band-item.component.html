@@ -1,7 +1,7 @@
 <p-card header="{{band.name}}" [style]="{width: '360px'}" styleClass="p-card-shadow">
   <ng-template pTemplate="header">
     <a routerLink="/details/{{this.index}}">
-      <img alt="{{band.name}}" src="{{band.image}}">
+      <img class="c-band-item__img" alt="{{band.name}}" src="{{band.image}}">
     </a>
   </ng-template>
   <p>{{text}}</p>
